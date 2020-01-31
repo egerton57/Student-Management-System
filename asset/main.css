@@ -1,0 +1,34 @@
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+table
+{
+    counter-reset: rowNumber;
+}
+
+table tr > td:first-child
+{
+    counter-increment: rowNumber;
+}
+
+table tr td:first-child::before
+{
+    content: counter(rowNumber);
+    min-width: 1em;
+    margin-right: 0.5em;
+}
+
+.bg {
+  /* The image used */
+  /*background-image: url("images/bg.jpg");*/
+
+  /* Full height */
+  height: 81%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
